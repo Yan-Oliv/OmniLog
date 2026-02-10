@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Sistema Omnia - Gestão Logística">
+  
+  <!-- PWA meta tags -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Omnia">
+  
+  <!-- Viewport otimizado para todas as plataformas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#0175C2">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icons/app_icon.png">
+
+  <!-- Apple touch icons -->
+  <link rel="apple-touch-icon" href="icons/app_icon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="icons/Icon-512.png">
+
+  <!-- CSS para splash screen -->
+  <style>
+    body { 
+      margin: 0; 
+      padding: 0; 
+      background: #0175C2; 
+      overflow: hidden;
+    }
+    .splash { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      width: 100vw;
+    }
+    .splash img { 
+      width: 100px; 
+      height: 100px; 
+      animation: pulse 1.5s infinite; 
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+  </style>
+  
+  <title>Omnia</title>
+  
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- Splash screen -->
+  <div class="splash">
+    <img src="icons/app_icon.png" alt="Omnia">
+  </div>
+
+  <!-- Scripts na ORDEM CORRETA -->
+  <!-- 1. Primeiro o flutter.js (ESSENCIAL) -->
+  <script src="flutter.js"></script>
+  
+  <!-- 2. Depois o flutter_bootstrap.js (seu original que funcionava) -->
+  <script src="flutter_bootstrap.js" async></script>
+  
+  <!-- Scripts para iOS (só executa se for iOS) -->
+  <script>
+    (function() {
+      console.log('🚀 Omnia PWA Initializing...');
+      
+      // Detecta iOS
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      
+      if (isIOS) {
+        console.log('📱 iOS Device detected - applying iOS optimizations');
+        
+        // Prevenir zoom no iOS (só se for iOS)
+        document.addEventListener('touchstart', function(event) {
+          if (event.touches.length > 1) {
+            event.preventDefault();
+          }
+        }, { passive: false });
+        
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+          const now = Date.now();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        }, { passive: false });
+        
+        // Prevenir scroll bounce
+        document.addEventListener('touchmove', function(event) {
+          if (event.scale !== 1) {
+            event.preventDefault();
+          }
+        }, { passive: false });
+      }
+      
+      // Configurações para todas as plataformas
+      requestNotificationPermission = function() {
+        if ('Notification' in window && Notification.permission === 'default') {
+          Notification.requestPermission();
+        }
+      };
+      
+      showFlutterNotification = function(title, body) {
+        if (Notification.permission === 'granted') {
+          new Notification(title, {
+            body: body,
+            icon: 'icons/app_icon.png'
+          });
+        }
+      };
+      
+      // Inicializa notificações
+      requestNotificationPermission();
+      
+    })();
+  </script>
+</body>
+</html>
