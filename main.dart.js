@@ -70362,7 +70362,7 @@ case 2:i=b
 s=3
 return A.h(A.wD(q.a.c),$async$Cr)
 case 3:h=b
-g=A.b(["L1_CAP","L2_GSR","L3_GTE","L4_MNG"],t.s)
+g=A.b(["L1_CAP","L1_CAP_ANL","L2_GSR","L3_GTE","L4_MNG"],t.s)
 f=A.bT(i,!0,t.P)
 e=A.a_(f).i("aH<1>")
 d=A.C(new A.aH(f,new A.aWq(g),e),e.i("r.E"))
@@ -70419,6 +70419,7 @@ p.v(new A.aWu(p))
 case 1:return A.m(q,r)}})
 return A.n($async$JO,r)},
 aK1(a){switch(a){case"L1_CAP":return"Captadores"
+case"L1_CAP_ANL":return"Captadores Analistas"
 case"L2_GSR":return"Gestores"
 case"L3_GTE":return"Gerentes"
 case"L4_MNG":return"Managers"
@@ -74600,7 +74601,7 @@ return A.h(o.IT(),$async$Cf)
 case 6:s=7
 return A.h(A.q5(o.a.c),$async$Cf)
 case 7:n=b
-m=A.b(["L1_CAP","L2_GSR","L3_GRT"],t.s)
+m=A.b(["L1_CAP","L1_CAP_ANL","L2_GSR","L3_GTE"],t.s)
 h=J.f5(n,new A.aZ5(o,m))
 g=A.C(h,h.$ti.i("r.E"))
 B.c.eR(g,new A.aZ6())
@@ -74794,7 +74795,7 @@ s=q}for(;;)switch(s){case 0:q=3
 s=6
 return A.h(A.q5(o.a.c),$async$JB)
 case 6:n=b
-m=A.b(["L1_CAP","L2_GSR","L3_GRT"],t.s)
+m=A.b(["L1_CAP","L1_CAP_ANL","L2_GSR","L3_GRT"],t.s)
 i=J.f5(n,new A.b6W(o,m))
 h=A.C(i,i.$ti.i("r.E"))
 B.c.eR(h,new A.b6X())
