@@ -83445,7 +83445,7 @@ ws(){var s=0,r=A.o(t.H),q,p=2,o=[],n=this,m,l,k,j,i,h,g,f,e,d
 var $async$ws=A.k(function(a,b){if(a===1){o.push(b)
 s=p}for(;;)switch(s){case 0:if(n.at.a===0){n.yz("Selecione pelo menos um acompanhamento",!0)
 s=1
-break}i=A.a(["ADM","L1_CAP","L1_CAP_ANL","L2_GSR","L5_GER"],t.s)
+break}i=A.a(["L1_CAP","L1_CAP_ANL","L2_GSR","L5_GER"],t.s)
 h=n.w
 g=A.a7(h).i("aK<1>")
 f=A.H(new A.aK(h,new A.aWH(n,i),g),g.i("u.E"))
