@@ -76015,7 +76015,7 @@ else{b3.sv8(0,b2)
 b1.c=b2}b0.K9()
 b0=A.bx9(new A.mn(new A.e5(b0,a7)))
 b1=new A.Ee("application".toLowerCase(),"octet-stream".toLowerCase(),new A.n5(A.E(a6,a6),a5))
-g=new A.N4("arquivos[]",a8.length,a9,b1,b0)
+g=new A.N4("arquivos",a8.length,a9,b1,b0)
 k.y.push(g)}s=7
 return A.e(J.bSk(k),$async$F2)
 case 7:f=c1
