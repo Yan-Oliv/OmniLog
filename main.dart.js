@@ -46943,12 +46943,12 @@ break
 case 5:return A.m(null,r)
 case 1:return A.l(p.at(-1),r)}})
 return A.n($async$aKQ,r)},
-Ag(a){var s,r,q,p="connection",o="socket",n="timeout"
+Ag(a){var s,r,q,p="connection",o="socket",n="timeout",m="clientexception",l="failed to fetch"
 if(typeof a=="string"){s=a.toLowerCase()
-return B.c.p(s,p)||B.c.p(s,"connect")||B.c.p(s,"network")||B.c.p(s,o)||B.c.p(s,n)||B.c.p(s,"timed out")||B.c.p(s,"host")||B.c.p(s,"dns")||B.c.p(s,"no internet")||B.c.p(s,"offline")||B.c.p(s,"unreachable")||B.c.p(s,"socketexception")||B.c.p(s,"handshakeexception")||B.c.p(s,"timeoutexception")||B.c.p(s,"ioexception")||B.c.p(s,"502")||B.c.p(s,"503")||B.c.p(s,"504")||B.c.p(s,"0")||B.c.p(s,"dioerror")||B.c.p(s,"cancel")||B.c.p(s,"receive timeout")||B.c.p(s,"send timeout")||B.c.p(s,"connection timeout")}if(t.VI.b(a)){r=a.j(0).toLowerCase()
-if(B.c.p(r,n)||B.c.p(r,o)||B.c.p(r,p)||B.c.p(r,"handshake")||B.c.p(r,"io"))return!0
+return B.c.p(s,p)||B.c.p(s,"connect")||B.c.p(s,"network")||B.c.p(s,o)||B.c.p(s,n)||B.c.p(s,"timed out")||B.c.p(s,"host")||B.c.p(s,"dns")||B.c.p(s,"no internet")||B.c.p(s,"offline")||B.c.p(s,"unreachable")||B.c.p(s,"socketexception")||B.c.p(s,"handshakeexception")||B.c.p(s,"timeoutexception")||B.c.p(s,"ioexception")||B.c.p(s,m)||B.c.p(s,l)||B.c.p(s,"fetch")||B.c.p(s,"network error")||B.c.p(s,"internet disconnected")||B.c.p(s,"502")||B.c.p(s,"503")||B.c.p(s,"504")||B.c.p(s,"0")||B.c.p(s,"dioerror")||B.c.p(s,"cancel")||B.c.p(s,"receive timeout")||B.c.p(s,"send timeout")||B.c.p(s,"connection timeout")}if(t.VI.b(a)){r=a.j(0).toLowerCase()
+if(B.c.p(r,m)||B.c.p(r,l)||B.c.p(r,"fetch")||B.c.p(r,"network")||B.c.p(r,n)||B.c.p(r,o)||B.c.p(r,p)||B.c.p(r,"handshake")||B.c.p(r,"io"))return!0
 q=A.iJ(A.V(a).a,null).toLowerCase()
-if(B.c.p(q,n)||B.c.p(q,o)||B.c.p(q,"io"))return!0}if(A.dh(a))return a===0||a===502||a===503||a===504
+if(B.c.p(q,n)||B.c.p(q,o)||B.c.p(q,"io")||B.c.p(q,"client"))return!0}if(A.dh(a))return a===0||a===502||a===503||a===504
 return!1},
 Fp(a){var s
 if(typeof a=="string"){s=a.toLowerCase()
