@@ -87118,7 +87118,7 @@ return s},
 $S:613}
 A.a72.prototype={
 L(a){var s=null,r=A.a8g(a,!0,t.hQ),q=A.a([B.a4d,B.a4j,B.a49],t.a9),p=r.a
-return new A.LY(new A.PR(B.yO,s),"Omnia",A.A5(B.bO,s,!0).ail(A.bx9(B.bO,s,s,B.os)),A.A5(B.u,s,!0).ail(A.bx9(B.u,s,s,B.os)),p,B.Ae,q,B.aea,!1,s)}}
+return new A.LY(new A.PR(B.yO,s),"Rastrea",A.A5(B.bO,s,!0).ail(A.bx9(B.bO,s,s,B.os)),A.A5(B.u,s,!0).ail(A.bx9(B.u,s,s,B.os)),p,B.Ae,q,B.aea,!1,s)}}
 A.ws.prototype={
 a3(){return new A.R0(new A.bk(null,t.o),new A.a4(B.p,$.ad()),A.a(["Fechadas","Abertas","Especiais"],t.s))}}
 A.R0.prototype={

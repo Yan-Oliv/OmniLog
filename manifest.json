@@ -1,6 +1,6 @@
 {
-  "name": "Omnia",
-  "short_name": "Omnia",
+  "name": "Rastrea",
+  "short_name": "Rastrea",
   "start_url": ".",
   "scope": "/",
   "display": "standalone",
@@ -8,7 +8,7 @@
   "background_color": "#0175C2",
   "theme_color": "#0175C2",
   "orientation": "any",
-  "description": "Sistema Omnia - Gestão completa",
+  "description": "Rastrea - Gestão logística completa",
   "categories": ["business", "productivity"],
   "lang": "pt-BR",
   "dir": "ltr",
